@@ -105,7 +105,7 @@
               M[current_word_index, ind] += 1
       ```
 
-      而这一段的思路就是，需要写的是M的内容。而M的内容是由下标决定，第一下标是sentence中扫描的word的下标，（这里这一段代码就显得不是非常的完美），而第二下标就是当前被扫描到的word的nearby的word的下标，（nearby的尺度由window_size决定），而这里用到的一个思路是以目的分割代码表示，就是words_aroud 的 + 的表现意义，空间上这段代码自然比较小，它只存储了所需改变的下标
+      而这一段的思路就是，需要写的是M的内容。而M的内容是由下标决定，第一下标是sentence中扫描的word的下标，（这里这一段代码就显得不是非常的完美），而第二下标就是当前被扫描到的word的nearby的word的下标，（nearby的尺度由window_size决定），而这里用到的一个思路是以目的分割代码表示，就是words_aroud 的 + 的表现意义，空间上这段代码自然比较小，它只存储了所需改变的下标，我的代码三层循环，大佬的代码两层，我多出来的是扫描word的nearby的过程，大佬是通过计算替代循环，==待续==
 
 
 
@@ -152,4 +152,20 @@
       - ==最简单的检查就是对新定义的def函数的每个参量进行检查==
 
       - ==然后就是对每个参量的意义的理解，即每个代码的伪代码的实现对应==
+
+- 参考
+
+
+
+
+
+
+
+### Co-Occurrence Plot Analysis 
+
+- 参考
+  - [numpy.linalg.norm](https://blog.csdn.net/lanchunhui/article/details/51004387)
+    - 就是计算范数
+  - [newaxis](https://blog.csdn.net/lanchunhui/article/details/51004387)
+    - 放在哪就在在哪增加一个维度
 
